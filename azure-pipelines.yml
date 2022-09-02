@@ -3,26 +3,25 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-resources:
-  repositories:
-  - repository: 222
-    type: github
-    name: 7Xws5239/222
-    endpoint: 7Xws5239
-  - repository: 333
-    type: github
-    name: 7Xws5239/333
-    endpoint: 7Xws5239
-variables:
- - name: checkoutreporef
-   value: $[ resources.repositories['333'].name ]
+# resources:
+#   repositories:
+#   - repository: 222
+#     type: github
+#     name: 7Xws5239/222
+#     endpoint: 7Xws5239
+#   - repository: 333
+#     type: github
+#     name: 7Xws5239/333
+#     endpoint: 7Xws5239
+# variables:
+#  - name: checkoutreporef
+#    value: $[ resources.repositories['333'].name ]
 steps:
-- checkout: 333
 - task: PythonScript@0
   inputs:
     scriptSource: 'inline'
     script: |
-      str = "$(checkoutreporef)"
+      str = "$(Build.Repository.Name)"
       
       str.split("/")
       
