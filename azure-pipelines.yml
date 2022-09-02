@@ -9,22 +9,32 @@ resources:
     type: github
     name: 7Xws5239/222
     endpoint: 7Xws5239
-  - repository: 3333
+  - repository: 333
     type: github
     name: 7Xws5239/333
     endpoint: 7Xws5239
 variables:
  - name: checkoutreporef
-   value: $[ resources.repositories['3333'].name ]
+   value: $[ resources.repositories['333'].name ]
 steps:
-- checkout: 3333
-- task: PowerShell@2
+- checkout: 333
+- task: PythonScript@0
   inputs:
-    targetType: 'inline'
+    scriptSource: 'inline'
     script: |
-      # Write your PowerShell commands here.
+      str = "$(checkoutreporef)"
       
-      Write-Host $(checkoutreporef)
+      str.split("/")
+      
+      #get the last name
+      print(str.split("/")[-1])
+# - task: PowerShell@2
+#   inputs:
+#     targetType: 'inline'
+#     script: |
+#       # Write your PowerShell commands here.
+      
+#       Write-Host $(checkoutreporef)
 # - checkout: 222
 # - checkout: 333
 # - task: PythonScript@0
