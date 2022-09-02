@@ -5,12 +5,17 @@ pool:
   vmImage: ubuntu-latest
 resources:
   repositories:
-  - repository: 111
+  - repository: 222
     type: github
     name: 7Xws5239/222
     endpoint: 7Xws5239
+  - repository: 333
+    type: github
+    name: 7Xws5239/333
+    endpoint: 7Xws5239
 steps:
-- checkout: 111
+- checkout: 222
+- checkout: 333
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
