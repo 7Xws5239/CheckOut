@@ -9,13 +9,13 @@ resources:
     type: github
     name: 7Xws5239/222
     endpoint: 7Xws5239
-  - repository: 333
+  - repository: 3333
     type: github
     name: 7Xws5239/333
     endpoint: 7Xws5239
 variables:
  - name: checkoutreporef
-   value: $[ resources.repositories['333'].ref ]
+   value: $[ resources.repositories['3333'] ]
 steps:
 - checkout: 333
 - task: PowerShell@2
