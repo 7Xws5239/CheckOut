@@ -15,7 +15,7 @@ resources:
     endpoint: 7Xws5239
 variables:
  - name: checkoutreporef
-   value: $[ resources.repositories['3333'] ]
+   value: $[ resources.repositories['3333'].name ]
 steps:
 - checkout: 333
 - task: PowerShell@2
