@@ -7,7 +7,7 @@ resources:
   repositories:
   - repository: 111
     type: github
-    name: 7Xws5239/111
+    name: 7Xws5239/222
     endpoint: 7Xws5239
 steps:
 - checkout: 111
