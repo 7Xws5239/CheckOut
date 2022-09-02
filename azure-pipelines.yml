@@ -16,13 +16,25 @@ resources:
 steps:
 - checkout: 222
 - checkout: 333
-- task: PowerShell@2
+- task: PythonScript@0
   inputs:
-    targetType: 'inline'
+    scriptSource: 'inline'
     script: |
-      # Write your PowerShell commands here.
+      import os
       
-      Write-Host "$(Build.Repository.LocalPath)"
-      Write-Host "$(Build.SourcesDirectory)"
-      Write-Host "$(System.DefaultWorkingDirectory)"
-      ls
+      #get current sub folders name
+      def getfoldersname():
+          folders = [f for f in os.listdir('.') if os.path.isdir(f)]
+          return folders
+      print(getfoldersname())
+# - task: PowerShell@2
+#   inputs:
+#     targetType: 'inline'
+#     script: |
+#       # Write your PowerShell commands here.
+      
+#       Write-Host "$(Build.Repository.LocalPath)"
+#       Write-Host "$(Build.SourcesDirectory)"
+#       Write-Host "$(System.DefaultWorkingDirectory)"
+#       Write-Host "$(System.DefaultWorkingDirectory)"
+#       ls
