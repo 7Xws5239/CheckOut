@@ -41,14 +41,14 @@ steps:
       
 #       printfoldersname()
 
-# - task: PowerShell@2
-#   inputs:
-#     targetType: 'inline'
-#     script: |
-#       # Write your PowerShell commands here.
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
       
-#       Write-Host "$(Build.Repository.LocalPath)"
-#       Write-Host "$(Build.SourcesDirectory)"
-#       Write-Host "$(System.DefaultWorkingDirectory)"
-#       Write-Host "$(System.DefaultWorkingDirectory)"
-#       ls
+      Write-Host "$(Build.Repository.LocalPath)"
+      Write-Host "$(Build.SourcesDirectory)"
+      Write-Host "$(System.DefaultWorkingDirectory)"
+      Write-Host "$(System.DefaultWorkingDirectory)"
+      ls
