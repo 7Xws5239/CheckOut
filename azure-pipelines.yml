@@ -3,7 +3,12 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+resources:
+  repositories:
+  - repository: 111
+    type: github
+    name: 7Xws5239/111
+    endpoint: 7Xws5239
 steps:
 - task: PowerShell@2
   inputs:
