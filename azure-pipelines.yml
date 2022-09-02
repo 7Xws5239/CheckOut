@@ -13,6 +13,9 @@ resources:
     type: github
     name: 7Xws5239/333
     endpoint: 7Xws5239
+variables:
+ - name: checkoutreporef
+   value: $[ resources.repositories['333'].ref ]
 steps:
 - checkout: 333
 - task: PowerShell@2
@@ -21,7 +24,7 @@ steps:
     script: |
       # Write your PowerShell commands here.
       
-      Write-Host $[ resources.repositories['333'].ref ]
+      Write-Host $(checkoutreporef)
 # - checkout: 222
 # - checkout: 333
 # - task: PythonScript@0
