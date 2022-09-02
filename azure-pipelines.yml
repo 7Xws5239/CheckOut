@@ -14,5 +14,4 @@ steps:
       Write-Host "$(Build.Repository.LocalPath)"
       Write-Host "$(Build.SourcesDirectory)"
       Write-Host "$(System.DefaultWorkingDirectory)"
-      dir
       ls
