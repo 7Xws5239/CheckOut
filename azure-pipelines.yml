@@ -21,7 +21,7 @@ steps:
     script: |
       # Write your PowerShell commands here.
       
-      Write-Host $(Build.Repository.Name)
+      Write-Host $[ resources.repositories['333'].ref ]
 # - checkout: 222
 # - checkout: 333
 # - task: PythonScript@0
