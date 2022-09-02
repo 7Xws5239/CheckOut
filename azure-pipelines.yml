@@ -15,3 +15,4 @@ steps:
       Write-Host "$(Build.SourcesDirectory)"
       Write-Host "$(System.DefaultWorkingDirectory)"
       dir
+      ls
