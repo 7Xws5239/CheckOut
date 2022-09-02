@@ -14,7 +14,7 @@ resources:
     name: 7Xws5239/333
     endpoint: 7Xws5239
 steps:
-# - checkout: 222
+- checkout: 222
 - checkout: 333
 - task: PowerShell@2
   inputs:
